@@ -6,34 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milan Society</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
+        body {
+            font-family: Arial, sans-serif;
             background-color: #F5F5DC; /* Beige background */
-            margin: 0; 
-            padding: 20px; 
+            margin: 0;
+            padding: 20px;
             text-align: center;
             border: 5px solid maroon; /* Maroon border */
         }
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
         }
         .logo {
-            max-width: 200px;
+            max-width: 150px;
             display: block;
             margin: auto;
         }
         h1 {
             color: maroon;
-        }
-        .editable-box {
-            border: 1px solid maroon;
-            padding: 10px;
-            margin: 10px 0;
-            background: #FFF3E0;
         }
         .nav-buttons a {
             display: inline-block;
@@ -47,14 +41,36 @@
         .nav-buttons a:hover {
             background: darkred;
         }
+        .content {
+            display: flex;
+            flex-direction: row;
+            max-width: 900px;
+            margin: auto;
+        }
+        .left-section {
+            width: 25%;
+            background: #FFF3E0;
+            padding: 10px;
+            border-right: 2px solid maroon;
+        }
+        .right-section {
+            width: 75%;
+            padding: 10px;
+        }
+        .editable-box {
+            border: 1px solid maroon;
+            padding: 10px;
+            margin: 10px 0;
+            background: #FFF3E0;
+        }
         .link-button {
-            display: inline-block;
-            text-decoration: none;
+            display: block;
+            margin: 10px 0;
             padding: 10px;
             background: maroon;
             color: white;
+            text-decoration: none;
             border-radius: 5px;
-            margin: 5px 0;
         }
         .link-button:hover {
             background: darkred;
@@ -65,17 +81,7 @@
     <div class="container">
         <img src="Logo-Round.PNG" alt="Milan Society Logo" class="logo">
         <h1>Welcome To Milan Society</h1>
-        
-        <div class="editable-box" contenteditable="true">
-            <h2>Introduction</h2>
-            <p>Welcome to Milan Society, a non-profit organization engaged in social, religious, and cultural activities, with a focus on Hindu traditions and Indian heritage.</p>
-        </div>
-        
-        <div class="editable-box" contenteditable="true">
-            <h2>Latest News</h2>
-            <p>Stay updated with our latest events and activities.</p>
-        </div>
-        
+
         <div class="nav-buttons">
             <a href="#">Home</a>
             <a href="#">Blog</a>
@@ -83,8 +89,24 @@
             <a href="#">About Us</a>
         </div>
         
-        <h2>Membership Registration</h2>
-        <a href="https://forms.office.com/e/BPHkYNdBsP" class="link-button">Join Milan Society</a>
+        <div class="editable-box" contenteditable="true">
+            <h2>Introduction</h2>
+            <p>Welcome to Milan Society, a non-profit organization engaged in social, religious, and cultural activities, with a focus on Hindu traditions and Indian heritage.</p>
+        </div>
+
+        <div class="content">
+            <div class="left-section">
+                <h3>Quick Links</h3>
+                <a href="https://forms.office.com/e/BPHkYNdBsP" class="link-button">Join Milan Society</a>
+                <a href="https://bkgeng-my.sharepoint.com/:l:/g/personal/brij_goyal_bkgeng_onmicrosoft_com/FC8ecBvVX4xEmJTwBrRdXWsBVIPDFp8sEIwsIy8vooKY_Q?nav=NDZkZmM2OTEtZThkMC00NTA1LWI5ODAtZGYxZGFmYjE0MDE0" class="link-button">Accounts</a>
+            </div>
+            <div class="right-section">
+                <div class="editable-box" contenteditable="true">
+                    <h2>Latest News</h2>
+                    <p>Stay updated with our latest events and activities.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
