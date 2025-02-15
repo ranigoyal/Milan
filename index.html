@@ -1,40 +1,90 @@
 <!-- Updated version -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milan Society Portal</title>
+    <title>Milan Society</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #0078D4; }
-        .container { max-width: 800px; margin: auto; }
-        button { padding: 10px; background: #0078D4; color: white; border: none; cursor: pointer; margin: 5px 0; }
-        button:hover { background: #005ea6; }
-        .link-button { display: inline-block; text-decoration: none; padding: 10px; background: #0078D4; color: white; border-radius: 5px; margin: 5px 0; }
-        .link-button:hover { background: #005ea6; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #F5F5DC; /* Beige background */
+            margin: 0; 
+            padding: 20px; 
+            text-align: center;
+            border: 5px solid maroon; /* Maroon border */
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo {
+            max-width: 200px;
+            display: block;
+            margin: auto;
+        }
+        h1 {
+            color: maroon;
+        }
+        .editable-box {
+            border: 1px solid maroon;
+            padding: 10px;
+            margin: 10px 0;
+            background: #FFF3E0;
+        }
+        .nav-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: maroon;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .nav-buttons a:hover {
+            background: darkred;
+        }
+        .link-button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+            background: maroon;
+            color: white;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .link-button:hover {
+            background: darkred;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Milan Society Portal</h1>
+        <img src="Logo-Round.PNG" alt="Milan Society Logo" class="logo">
+        <h1>Welcome To Milan Society</h1>
+        
+        <div class="editable-box" contenteditable="true">
+            <h2>Introduction</h2>
+            <p>Welcome to Milan Society, a non-profit organization engaged in social, religious, and cultural activities, with a focus on Hindu traditions and Indian heritage.</p>
+        </div>
+        
+        <div class="editable-box" contenteditable="true">
+            <h2>Latest News</h2>
+            <p>Stay updated with our latest events and activities.</p>
+        </div>
+        
+        <div class="nav-buttons">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">About Us</a>
+        </div>
         
         <h2>Membership Registration</h2>
         <a href="https://forms.office.com/e/BPHkYNdBsP" class="link-button">Join Milan Society</a>
-
-        <h2>Donate</h2>
-        <p>Bank Transfer Details: Account No: 12345678, Sort Code: 12-34-56</p>
-        <a href="YOUR_DONATION_SHAREPOINT_LINK_HERE" class="link-button">Donate Now</a>
-
-        <h2>Events</h2>
-        <a href="YOUR_SHAREPOINT_EVENTS_LIST_LINK_HERE" class="link-button">View Upcoming Events</a>
-        
-        <h2>Leave a Message</h2>
-        <a href="YOUR_MESSAGE_FORM_LINK_HERE" class="link-button">Send a Message</a>
-
-        <h2>Financial Tracking (Officials Only)</h2>
-        <a href="YOUR_SHAREPOINT_FINANCIALS_LIST_LINK_HERE" class="link-button">Manage Finances</a>
     </div>
 </body>
 </html>
