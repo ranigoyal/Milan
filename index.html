@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan Society Portal</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #0078D4; }
+        .container { max-width: 800px; margin: auto; }
+        button { padding: 10px; background: #0078D4; color: white; border: none; cursor: pointer; }
+        button:hover { background: #005ea6; }
+        input, textarea { width: 100%; padding: 8px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Milan Society Portal</h1>
+        <h2>Events</h2>
+        <div id="events-list">Loading events...</div>
+        
+        <h2>Membership</h2>
+        <form id="membershipForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Join Milan Society</button>
+        </form>
+        
+        <h2>Donate</h2>
+        <p>Bank Transfer Details: Account No: 12345678, Sort Code: 12-34-56</p>
+        
+        <h2>Leave a Message</h2>
+        <form id="messageForm">
+            <input type="text" id="senderName" placeholder="Your Name" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        const siteUrl = 'https://yourtenant.sharepoint.com/sites/MilanSociety';
+        const listName = 'Events';
+
+        async function fetchEvents() {
+            const response = await fetch(`${siteUrl}/_api/web/lists/getbytitle('${listName}')/items`, {
+                headers: { 'Accept': 'application/json;odata=verbose' }
+            });
+            const data = await response.json();
+            const eventsDiv = document.getElementById('events-list');
+            eventsDiv.innerHTML = data.d.results.map(event => `<p><strong>${event.Title}</strong> - ${event.Date}</p>`).join('');
+        }
+        fetchEvents();
+
+        document.getElementById('membershipForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            await fetch(`${siteUrl}/_api/web/lists/getbytitle('Membership')/items`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ Title: fullName, Email: email })
+            });
+            alert('Membership request submitted!');
+        });
+
+        document.getElementById('messageForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const senderName = document.getElementById('senderName').value;
+            const message = document.getElementById('message').value;
+            await fetch(`${siteUrl}/_api/web/lists/getbytitle('Messages')/items`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ Title: senderName, Message: message })
+            });
+            alert('Message sent!');
+        });
+    </script>
+</body>
+</html>
