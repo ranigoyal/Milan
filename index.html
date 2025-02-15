@@ -10,9 +10,10 @@
         body { font-family: Arial, sans-serif; margin: 20px; }
         h1 { color: #0078D4; }
         .container { max-width: 800px; margin: auto; }
-        button { padding: 10px; background: #0078D4; color: white; border: none; cursor: pointer; }
+        button { padding: 10px; background: #0078D4; color: white; border: none; cursor: pointer; margin: 5px 0; }
         button:hover { background: #005ea6; }
-        input, textarea { width: 100%; padding: 8px; margin: 5px 0; }
+        .link-button { display: inline-block; text-decoration: none; padding: 10px; background: #0078D4; color: white; border-radius: 5px; margin: 5px 0; }
+        .link-button:hover { background: #005ea6; }
     </style>
 </head>
 <body>
@@ -20,53 +21,20 @@
         <h1>Welcome to Milan Society Portal</h1>
         
         <h2>Membership Registration</h2>
-        <form id="membershipForm">
-            <input type="text" id="fullName" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <button type="submit">Join Milan Society</button>
-        </form>
+        <a href="YOUR_MS_FORMS_LINK_HERE" class="link-button">Join Milan Society</a>
 
         <h2>Donate</h2>
         <p>Bank Transfer Details: Account No: 12345678, Sort Code: 12-34-56</p>
+        <a href="YOUR_DONATION_SHAREPOINT_LINK_HERE" class="link-button">Donate Now</a>
 
+        <h2>Events</h2>
+        <a href="YOUR_SHAREPOINT_EVENTS_LIST_LINK_HERE" class="link-button">View Upcoming Events</a>
+        
         <h2>Leave a Message</h2>
-        <form id="messageForm">
-            <input type="text" id="senderName" placeholder="Your Name" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <a href="YOUR_MESSAGE_FORM_LINK_HERE" class="link-button">Send a Message</a>
+
+        <h2>Financial Tracking (Officials Only)</h2>
+        <a href="YOUR_SHAREPOINT_FINANCIALS_LIST_LINK_HERE" class="link-button">Manage Finances</a>
     </div>
-
-    <script>
-        const siteUrl = 'https://yourtenant.sharepoint.com/sites/MilanSociety';
-
-        document.getElementById('membershipForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const fullName = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-
-            await fetch(`${siteUrl}/_api/web/lists/getbytitle('Membership')/items`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify({ Title: fullName, Email: email })
-            });
-
-            alert('Membership request submitted!');
-        });
-
-        document.getElementById('messageForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const senderName = document.getElementById('senderName').value;
-            const message = document.getElementById('message').value;
-
-            await fetch(`${siteUrl}/_api/web/lists/getbytitle('Messages')/items`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify({ Title: senderName, Message: message })
-            });
-
-            alert('Message sent!');
-        });
-    </script>
 </body>
 </html>
