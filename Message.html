@@ -7,9 +7,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f8f8f8;
+            background-color: #f5f5dc;
+            margin: 0;
             padding: 20px;
+            border: 5px solid maroon;
+            text-align: center;
         }
         iframe {
             width: 100%;
@@ -17,13 +19,28 @@
             height: 800px;
             border: none;
         }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: maroon;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
-    <h1>Leave a Message</h1>
-    <p>Please use the form below to send us your message.</p>
-    <iframe src="https://forms.office.com/e/1CRQPfJMPg?origin=lprLink" allowfullscreen></iframe>
-    <br>
-    <p><a href="index.html">← Back to Home</a></p>
+    <div class="container">
+        <h1>Leave a Message</h1>
+        <p>Please use the form below to send us your message.</p>
+        <iframe src="https://forms.office.com/e/1CRQPfJMPg?origin=lprLink" allowfullscreen></iframe>
+        <br><br>
+        <a href="index.html">← Back to Home</a>
+    </div>
 </body>
 </html>
+
