@@ -1,4 +1,3 @@
-<!-- Updated version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,110 +7,79 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #F5F5DC; /* Beige background */
+            background-color: #f8f8f8;
             margin: 0;
             padding: 20px;
-            text-align: center;
-            border: 5px solid maroon; /* Maroon border */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
         }
-        .logo {
-            max-width: 150px;
-            display: block;
-            margin: auto;
-        }
-        h1 {
-            color: maroon;
-        }
-        .nav-buttons a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background: maroon;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .nav-buttons a:hover {
-            background: darkred;
+        .sidebar {
+            width: 25%;
+            background-color: #fff;
+            padding: 15px;
+            border-right: 2px solid #ddd;
         }
         .content {
-            display: flex;
-            flex-direction: row;
-            max-width: 900px;
-            margin: auto;
-        }
-        .left-section {
-            width: 25%;
-            background: #FFF3E0;
-            padding: 10px;
-            border-right: 2px solid maroon;
-        }
-        .right-section {
             width: 75%;
-            padding: 10px;
+            padding: 15px;
         }
-        .editable-box {
-            border: 1px solid maroon;
-            padding: 10px;
-            margin: 10px 0;
-            background: #FFF3E0;
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .link-button {
-            display: block;
-            margin: 10px 0;
-            padding: 10px;
-            background: maroon;
-            color: white;
+        .quick-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .quick-links li {
+            margin-bottom: 10px;
+        }
+        .quick-links a {
             text-decoration: none;
-            border-radius: 5px;
+            color: #007bff;
         }
-        .link-button:hover {
-            background: darkred;
+        .office-use {
+            margin-top: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
+    <div class="logo">
+        <img src="Logo-Round.PNG" alt="Milan Society Logo" width="150">
+    </div>
     <div class="container">
-        <img src="Logo-Round.PNG" alt="Milan Society Logo" class="logo">
-        <h1>Welcome To Milan Society</h1>
-
-        <div class="nav-buttons">
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About Us</a>
+        <div class="sidebar">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+                <li><a href="message.html">Leave a Message</a></li>
+                <li><a href="https://forms.office.com/e/jf7i0bFpZP?origin=lprLink" target="_blank">Event Booking</a></li>
+                <li><a href="https://bkgeng.sharepoint.com/:b:/s/MilanSociety/EaUstH5VYylEsrEQfGDK6awBQGmczwze6oV7vtCHZPBhLg?e=5y1nhO" target="_blank">Constitution</a></li>
+                <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=EiEtclKnD0yGt2C92rb54XdRD9iM73lNkfn73MW0IxxUM0wwWjYxODkwNE8zSFhMS0xaVTdMWEg4Ny4u" target="_blank">Event Reporting</a></li>
+                <li><a href="https://forms.office.com/e/1eVFtHkN7m" target="_blank">Petty Cash</a></li>
+                <li><a href="https://forms.office.com/e/BPHkYNdBsP" target="_blank">Membership</a></li>
+            </ul>
+            <div class="office-use">
+                <h4>Office Use</h4>
+                <ul>
+                    <li><a href="https://forms.office.com/e/4Xghn7MNq0?origin=lprLink" target="_blank">Event Calendar</a></li>
+                    <li><a href="https://bkgeng-my.sharepoint.com/:l:/g/personal/brij_goyal_bkgeng_onmicrosoft_com/FC8ecBvVX4xEmJTwBrRdXWsBVIPDFp8sEIwsIy8vooKY_Q?nav=NDZkZmM2OTEtZThkMC00NTA1LWI5ODAtZGYxZGFmYjE0MDE0" target="_blank">Accounts</a></li>
+                    <li><a href="https://bkgeng-my.sharepoint.com/:l:/g/personal/brij_goyal_bkgeng_onmicrosoft_com/FKY5Y5MDx95Cmpx9YFLrkcMBdnKE1o-Tzs0pIaXwg70X5w?nav=ZjQ3OGEwNzctYzc4OC00NmY1LTg4MmQtZWYxMzg5ZjViYjAx" target="_blank">Guidance Notes</a></li>
+                    <li><a href="https://forms.office.com/e/xnbyYnaWmF" target="_blank">Issue Receipts</a></li>
+                </ul>
+            </div>
         </div>
-        
         <div class="content">
-            <div class="left-section">
-                <h3>Quick Links</h3>
-                <a href="https://forms.office.com/e/BPHkYNdBsP" target="_blank" class="link-button">Join Milan Society</a>
-                <a href="https://bkgeng-my.sharepoint.com/:l:/g/personal/brij_goyal_bkgeng_onmicrosoft_com/FC8ecBvVX4xEmJTwBrRdXWsBVIPDFp8sEIwsIy8vooKY_Q?nav=NDZkZmM2OTEtZThkMC00NTA1LWI5ODAtZGYxZGFmYjE0MDE0" target="_blank" class="link-button">Accounts</a>
-                <a href="#" class="link-button">Events (Coming Soon)</a>
-                <a href="#" class="link-button">Donations (Coming Soon)</a>
-                <a href="#" class="link-button">Messaging (Coming Soon)</a>
-                <a href="#" class="link-button">Media Gallery (Coming Soon)</a>
-            </div>
-            <div class="right-section">
-                <div class="editable-box" contenteditable="true">
-                    <p>Welcome to Milan Society, a non-profit organization engaged in social, religious, and cultural activities, with a focus on Hindu traditions and Indian heritage.</p>
-                </div>
-                <div class="editable-box" contenteditable="true">
-                    <h2>Latest News</h2>
-                    <p>Stay updated with our latest events and activities.</p>
-                </div>
-            </div>
+            <h1>Welcome to Milan Society</h1>
+            <p>Your community for cultural, religious, and social events.</p>
         </div>
     </div>
 </body>
 </html>
-<p><a href="message.html">Leave a Message</a></p>
-
 
