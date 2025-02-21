@@ -3,81 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Milan Society</title>
+    <title>Milan Society</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5dc;
+            background-color: #F5F5DC; /* Beige background */
+            color: #800000; /* Maroon text */
             margin: 0;
             padding: 0;
-            border: 5px solid maroon;
+            text-align: center;
         }
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 80%;
             margin: auto;
-            display: flex;
-        }
-        .sidebar {
-            width: 25%;
-            background-color: #fff;
-            padding: 15px;
-            border-right: 2px solid #8B0000;
-        }
-        .content {
-            width: 75%;
-            padding: 20px;
         }
         .logo {
-            text-align: left;
-            padding: 10px;
+            width: 150px;
+            margin-top: 20px;
         }
-        .quick-links {
-            list-style-type: none;
-            padding: 0;
+        .navigation {
+            margin: 20px 0;
         }
-        .quick-links li {
-            margin-bottom: 10px;
-        }
-        .quick-links a {
+        .navigation a {
+            background-color: #800000;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
             text-decoration: none;
-            color: maroon;
+            border-radius: 5px;
+            display: inline-block;
         }
-        .editable-box {
-            background-color: #fff;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .left-panel {
+            width: 25%;
+            text-align: left;
+        }
+        .right-panel {
+            width: 70%;
+        }
+        .box {
+            background: white;
             padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid maroon;
+            margin: 10px 0;
+            border: 1px solid #800000;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="Logo-Round.PNG" alt="Milan Society Logo" width="150">
-    </div>
     <div class="container">
-        <div class="sidebar">
-            <h3>Quick Links</h3>
-            <ul class="quick-links">
-                <li><a href="message.html">Leave a Message</a></li>
-                <li><a href="https://forms.office.com/e/jf7i0bFpZP?origin=lprLink" target="_blank">Event Booking</a></li>
-                <li><a href="https://bkgeng.sharepoint.com/:b:/s/MilanSociety/EaUstH5VYylEsrEQfGDK6awBQGmczwze6oV7vtCHZPBhLg?e=5y1nhO" target="_blank">Constitution</a></li>
-                <li><a href="https://forms.office.com/e/xnbyYnaWmF" target="_blank">Issue Receipts</a></li>
-                <li><a href="https://forms.office.com/e/BPHkYNdBsP" target="_blank">Membership</a></li>
-            </ul>
+        <img src="Logo-Round.PNG" alt="Milan Society Logo" class="logo">
+        <h1>Welcome to Milan Society</h1>
+        <div class="navigation">
+            <a href="message.html">Leave a Message</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
         </div>
         <div class="content">
-            <h1>Welcome To Milan Society</h1>
-            <div class="editable-box">
-                <h2>Introduction</h2>
-                <p>[Editable content area - You can insert text and images here]</p>
+            <div class="left-panel">
+                <h3>Official Use</h3>
+                <ul>
+                    <li><a href="#">Membership Form</a></li>
+                    <li><a href="#">Event Booking</a></li>
+                    <li><a href="#">Accounts</a></li>
+                    <li><a href="#">Reports</a></li>
+                </ul>
             </div>
-            <div class="editable-box">
-                <h2>Latest News</h2>
-                <p>[Editable content area - You can insert news and images here]</p>
+            <div class="right-panel">
+                <div class="box">
+                    <h2>Introduction</h2>
+                    <p>Milan Society is a non-profit organization engaged in social, religious, and cultural activities, particularly focusing on Hindu traditions and Indian culture.</p>
+                </div>
+                <div class="box">
+                    <h2>Latest News</h2>
+                    <p>Stay updated with our latest events and activities.</p>
+                </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-
