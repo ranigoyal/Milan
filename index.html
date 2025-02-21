@@ -6,28 +6,37 @@
     <title>Milan Society</title>
     <style>
         body {
+            background-color: #F5DEB3; /* Beige Background */
             font-family: Arial, sans-serif;
-            background-color: #F5F5DC; /* Beige background */
-            color: #800000; /* Maroon text */
             margin: 0;
             padding: 0;
-            text-align: center;
         }
         .container {
             width: 80%;
             margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10px;
         }
         .logo {
-            width: 150px;
-            margin-top: 20px;
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
         }
-        .navigation {
-            margin: 20px 0;
+        .nav-buttons {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .navigation a {
-            background-color: #800000;
+        .nav-buttons a {
+            background-color: maroon;
             color: white;
-            padding: 10px 15px;
+            padding: 10px 20px;
             margin: 5px;
             text-decoration: none;
             border-radius: 5px;
@@ -35,55 +44,66 @@
         }
         .content {
             display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
+            width: 100%;
         }
         .left-panel {
             width: 25%;
-            text-align: left;
+            padding: 10px;
+            background-color: #FFF5EE;
         }
         .right-panel {
-            width: 70%;
+            width: 75%;
+            padding: 20px;
         }
-        .box {
-            background: white;
+        .section {
+            background-color: white;
             padding: 15px;
-            margin: 10px 0;
-            border: 1px solid #800000;
+            margin-bottom: 15px;
             border-radius: 5px;
+        }
+        .official-links {
+            color: maroon;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="Logo-Round.PNG" alt="Milan Society Logo" class="logo">
-        <h1>Welcome to Milan Society</h1>
-        <div class="navigation">
-            <a href="message.html">Leave a Message</a>
+        <div class="header">
+            <img src="Logo-Round.PNG" alt="Milan Society Logo" class="logo">
+            <h1>Welcome to Milan Society</h1>
+        </div>
+        
+        <div class="nav-buttons">
+            <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
         </div>
+        
         <div class="content">
             <div class="left-panel">
+                <h3>Public Links</h3>
+                <a href="https://forms.office.com/e/BPHkYNdBsP" target="_blank">Membership Form</a>
+                <a href="#">Event List (Placeholder)</a>
+                <a href="#">Donate (Placeholder)</a>
+                
                 <h3>Official Use</h3>
-                <ul>
-                    <li><a href="#">Membership Form</a></li>
-                    <li><a href="#">Event Booking</a></li>
-                    <li><a href="#">Accounts</a></li>
-                    <li><a href="#">Reports</a></li>
-                </ul>
+                <p><a href="https://bkgeng-my.sharepoint.com/..." target="_blank" class="official-links">Accounts</a></p>
+                <p><a href="#" class="official-links">Other Links (Placeholder)</a></p>
             </div>
+            
             <div class="right-panel">
-                <div class="box">
+                <div class="section">
                     <h2>Introduction</h2>
-                    <p>Milan Society is a non-profit organization engaged in social, religious, and cultural activities, particularly focusing on Hindu traditions and Indian culture.</p>
+                    <p>Milan Society is a non-profit organization dedicated to social, religious, and cultural activities, especially Hindu religious events and Indian cultural traditions.</p>
                 </div>
-                <div class="box">
+                <div class="section">
                     <h2>Latest News</h2>
-                    <p>Stay updated with our latest events and activities.</p>
+                    <p>Stay updated with our latest events and activities!</p>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
